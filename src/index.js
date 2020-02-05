@@ -4,6 +4,7 @@ import App from './App';
 import {createStore} from "redux";
 import {Provider} from "react-redux";
 import {reducer} from "./reducer"
+import {addFeatures, removeFeatures, updateTotal} from "./actions"
 
 import 'bulma/css/bulma.css';
 import './styles.scss';
