@@ -7,7 +7,7 @@ export const UPDATE_TOTAL="UPDATE_TOTAL";
 export const addFeatures = newFeatures=>{
     console.log("ADD_FEATURES", newFeatures);
     return {
-        type:UPDATE_TITLE,
+        type:ADD_FEATURES,
         payload:newFeatures
     }
 }
