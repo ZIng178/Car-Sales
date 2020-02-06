@@ -12,11 +12,11 @@ export const addFeatures = newFeatures=>{
     }
 }
 
-export const removeFeatures = deleteFeatures=>{
-    console.log("RemoveFeatures", deleteFeatures);
+export const removeFeature = removeFeature=>{
+    console.log("RemoveFeatures", removeFeature);
     return {
         type:REMOVE_FEATURES,
-         payload: deleteFeatures
+         payload: removeFeature
     }
 }
 

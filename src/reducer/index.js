@@ -19,17 +19,20 @@ export const initialState={
 }
 
 export const reducer=(state=initialState, action ) =>{
-    console.log(state,action);
+    console.log("State", state);
+    console.log("Action", action);
     switch(action.type){
         case ADD_FEATURES:
             return {
-                ...state, car:{...state.car}, features:state.car.features.includes(action.payload)
+                ...state, car:{...state.car, features:state.car.features.includes(action.payload)
                 ? [...state.car.features] : [...state.car.features, action.payload]
             }
+        }
             case REMOVE_FEATURES:
                 return{
-                    ...state, car:{...state.car}, features : state.car.features.filter(features=> features.id !== action.payload.id)
+                    ...state, car:{...state.car, features : state.car.features.filter(features=> features.id !== action.payload.id)
                 }
+            }
                 case UPDATE_TOTAL :
                     return{
                         ...state, additionalPrice:state.additionalPrice + action.payload
